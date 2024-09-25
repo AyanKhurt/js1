@@ -19,13 +19,13 @@
 
             const userPassword = document.getElementById('userPassword').value;
 
-            if (!userPassword) {
-                document.getElementById('message').textContent = "Please enter your password";
+            if (userPassword) {
+                document.getElementById('message').innerText = "Please enter your password";
             } else {
                 if (userPassword === correctPassword) {
-                    document.getElementById('message').textContent = "Correct! The password you entered matches the original password.";
+                    document.getElementById('message').innerText = "Correct! The password you entered matches the original password.";
                 } else {
-                    document.getElementById('message').textContent = "Incorrect password.";
+                    document.getElementById('message').innerText = "Incorrect password.";
                 }
             }
         }
