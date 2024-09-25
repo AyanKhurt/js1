@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+</head>
+<body>
     <style>
-
         body {
             background-color: rgb(189, 189, 189);
             text-align: center;
@@ -41,36 +42,34 @@
             background-color: #45a049;
         }
 
-        .message {
+        .name {
             font-size: 28px;
             color: #4CAF50;
             margin-top: 30px;
             text-shadow: 2px 2px gold;
         }
-    </style>
 
+    </style>
 </head>
 <body>
 
-<h2>Enter your gender:</h2>
+<h2>Enter your city:</h2>
 
-<input type="text" class="input" placeholder="Enter Male or Female">
+<input type="text" class="input" placeholder="Enter Your City Name">
 
-<button class="result" onclick="displayMessage()">Submit</button>
+<button class="result" onclick="call()">Submit</button>
 
-<p class="message"></p>
+<h1 class="name"></h1>
 
 <script>
-    function displayMessage() {
-        let gender = document.querySelector(".input").value.toLowerCase();
-        let message = document.querySelector(".message");
+    function call() {
+        let userInput = document.querySelector(".input").value.toLowerCase();
+        let show = document.querySelector(".name");
 
-        if (gender === "male") {
-            message.innerHTML = "Good Morning Sir.";
-        } else if (gender === "female") {
-            message.innerHTML = "Good Morning Ma’am.";
+        if (userInput === "karachi") {
+            show.innerHTML = "Welcome to city of lights";
         } else {
-            message.innerHTML = "Please enter a valid gender (Male or Female).";
+            show.innerHTML = "Welcome";
         }
     }
 </script>

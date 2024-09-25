@@ -48,13 +48,12 @@
             text-shadow: 2px 2px gold;
         }
     </style>
-
 </head>
 <body>
 
-<h2>Enter your gender:</h2>
+<h2>Enter the color of the traffic signal:</h2>
 
-<input type="text" class="input" placeholder="Enter Male or Female">
+<input type="text" class="input" placeholder="Enter Red, Yellow or Green">
 
 <button class="result" onclick="displayMessage()">Submit</button>
 
@@ -62,15 +61,17 @@
 
 <script>
     function displayMessage() {
-        let gender = document.querySelector(".input").value.toLowerCase();
+        let signalColor = document.querySelector(".input").value.toLowerCase();
         let message = document.querySelector(".message");
 
-        if (gender === "male") {
-            message.innerHTML = "Good Morning Sir.";
-        } else if (gender === "female") {
-            message.innerHTML = "Good Morning Ma’am.";
+        if (signalColor === "red") {
+            message.innerHTML = "Must Stop";
+        } else if (signalColor === "yellow") {
+            message.innerHTML = "Ready to move";
+        } else if (signalColor === "green") {
+            message.innerHTML = "Move now";
         } else {
-            message.innerHTML = "Please enter a valid gender (Male or Female).";
+            message.innerHTML = "Please enter a valid traffic signal color (Red, Yellow, Green).";
         }
     }
 </script>
