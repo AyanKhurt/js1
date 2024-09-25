@@ -19,11 +19,11 @@
 
             const userPassword = document.getElementById('userPassword').value;
 
-            if (userPassword) {
+            if (!userPassword) {
                 document.getElementById('message').textContent = "Please enter your password";
             } else {
                 if (userPassword === correctPassword) {
-                    document.getElementById('message').textContent = "Correct! The password you entered matches the original password.";
+                    document.getElementById('message').textContent = "Correct!";
                 } else {
                     document.getElementById('message').textContent = "Incorrect password.";
                 }
